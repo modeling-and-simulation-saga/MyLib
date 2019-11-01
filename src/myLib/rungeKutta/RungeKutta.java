@@ -10,11 +10,11 @@ public class RungeKutta {
     /**
      * One step from x to x + h
      *
-     * @param x initial value of independent valiable
-     * @param y initial values of dependent valiables
+     * @param x initial value of independent variable
+     * @param y initial values of dependent variables
      * @param h step
      * @param eq class contains differential equations
-     * @return next values of dependent valiables
+     * @return next values of dependent variables
      */
     public static double[] rk4(
             double x, double y[], double h, DifferentialEquation eq) {
@@ -46,12 +46,12 @@ public class RungeKutta {
     /**
      * solve by rk4 from x1 to x2 with nstep
      *
-     * @param vstart start values of dependent valiables
-     * @param x1 initial value of independent valiable
-     * @param x2 final value of independent valiable
+     * @param vstart start values of dependent variables
+     * @param x1 initial value of independent variable
+     * @param x2 final value of independent variable
      * @param nstep the number of steps between x1 and x3
      * @param eq class contains differential equations
-     * @return sequence of values of dependent valiables
+     * @return sequence of values of dependent variables
      */
     public static double[][] rkdumb(
             double vstart[], double x1, double x2, int nstep,

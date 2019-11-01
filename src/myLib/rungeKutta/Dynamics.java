@@ -99,7 +99,7 @@ public class Dynamics {
      * @return nstepの間の時間発展 (t, y[0])のリスト
      */
     public List<Point2D.Double> evolution(double h, int nstep, int vNum) {
-        double yy[][] = RungeKutta.rkdumb(y, t, h, nstep, equation);
+        double yy[][] = RungeKutta.rkdumb(y, t, t + h, nstep, equation);
         List<Point2D.Double> points = Utils.createList();
         double dt = h / nstep;
         for (int i = 0; i < nstep; i++) {
@@ -123,7 +123,7 @@ public class Dynamics {
      * @return nstepの間の時間発展 (t, y[0])のリスト
      */
     public List<Point2D.Double> evolution(double h, int nstep, int xNum, int yNum) {
-        double yy[][] = RungeKutta.rkdumb(y, t, h, nstep, equation);
+        double yy[][] = RungeKutta.rkdumb(y, t, t + h, nstep, equation);
         List<Point2D.Double> points = Utils.createList();
         double dt = h / nstep;
         for (int i = 0; i < nstep; i++) {
